@@ -1,50 +1,180 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block content %} {% endblock %}
+{% block content2 %}
 
-    {% block content %}
-   
-    {% endblock %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 style="text-align: center; color: #952323">
+        EXPOTEL ENCRYPT & DECRYPT
+      </h1>
+      <br />
+      <h2 style="color: #952323">Sekilas Tentang</h2>
+      <p style="text-align: justify">
+        <b>Enkripsi</b> dan <b>Dekripsi</b> berkas adalah proses pengamanan dan
+        pemulihan informasi yang sensitif pada suatu situs web. Fitur ini
+        memungkinkan pengguna untuk mengamankan berkas dengan menggunakan
+        algoritma enkripsi tertentu, sehingga hanya penerima yang memiliki kunci
+        enkripsi yang tepat yang dapat membuka dan mendekripsikan berkas
+        tersebut. Proses enkripsi melibatkan konversi isi berkas menjadi format
+        yang tidak terbaca tanpa kunci enkripsi yang benar, sementara dekripsi
+        memungkinkan berkas tersebut dikembalikan ke bentuk semula setelah
+        melewati proses enkripsi. Dengan demikian, fitur enkripsi dan dekripsi
+        berkas pada suatu situs web membantu melindungi privasi dan keamanan
+        data pengguna dari akses yang tidak sah.
+      </p>
 
-    {% block content2 %}
+      <h2 style="color: #952323">Keuntungan</h2>
+      <ol>
+        <li>
+          <b>Perlindungan Kerahasiaan Data:</b> Dengan enkripsi yang kuat,
+          layanan ini memastikan bahwa berkas sensitif Anda tetap terlindungi
+          dari akses yang tidak sah atau pencurian data. Hanya pihak yang
+          memiliki kunci enkripsi yang tepat yang dapat mengakses isi berkas
+          tersebut.
+        </li>
+        <li>
+          <b>Keamanan Komunikasi dan Berbagi Berkas:</b> Memungkinkan pengguna
+          untuk berbagi informasi dan berkas secara online dengan keyakinan
+          bahwa data tersebut aman. Hal ini sangat berguna dalam lingkup bisnis
+          atau komunikasi pribadi yang membutuhkan tingkat keamanan tinggi.
+        </li>
+        <li>
+          <b>Kepatuhan Regulasi dan Privasi:</b> Layanan enkripsi/dekripsi
+          membantu perusahaan dan individu untuk memenuhi regulasi keamanan data
+          yang ketat serta menjaga privasi data sesuai dengan standar yang
+          berlaku, terutama dalam industri yang mengatur ketat kerahasiaan
+          informasi.
+        </li>
+        <li>
+          <b>Pencegahan Akses Tidak Sah:</b> Dapat mencegah akses tidak sah
+          terhadap informasi rahasia atau penting dengan mengenkripsi berkas,
+          sehingga meskipun data tersebut dicuri atau hilang, akses ke konten
+          sebenarnya tetap terlindungi.
+        </li>
+        <li>
+          <b>Kontrol Penuh terhadap Informasi:</b> Memberikan pemilik data
+          kontrol penuh terhadap siapa yang dapat membuka dan mengakses berkas
+          dengan memberikan kunci enkripsi yang sesuai. Hal ini memungkinkan
+          untuk mengontrol dan membatasi akses berkas hanya kepada pihak yang
+          diotorisasi.
+        </li>
+        <li>
+          <b>Saat Penyimpanan dan Pengiriman:</b> Membantu dalam melindungi
+          berkas saat disimpan di server atau saat berpindah tangan dari satu
+          pihak ke pihak lain melalui internet, memberikan lapisan keamanan
+          tambahan terhadap risiko pencurian atau intersepsi.
+        </li>
+      </ol>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 style="text-align: center; color: #952323;">S1 - TEKNIK TELEKOMUNIKASI</h1>
-          <br>
-              <h2 style="color: #952323;">Sekilas Tentang</h2>
-              <p style="text-align: justify;">Program Studi S1 Teknik Telekomunikasi adalah program studi yang mempelajari rekayasa di bidang 
-                telekomunikasi. Ruang lingkup rekayasa meliputi aspek-aspek yang terkait dengan teknologi, protokol, 
-                layanan, desain dan teknik pengiriman informasi broadband. Agar dapat bersaing dimasa yang akan datang, 
-                mahasiswa dibekali pula dengan wawasan kemandirian, kewirausahaan serta kerjasama tim antardisiplin ilmu 
-                agar dapat berkompetisi, berkarya, berkontribusi dan mengembangkan diri di komunitas professional. 
-                Kurikulum pendidikan di Prodi S1 Teknik Telekomunikasi didesain selama 4 tahun dan mengacu pada kurikulum berbasis Outcome Based Educatiom (OBE).</p>
-              
-              <h2 style="color: #952323;">Keunggulan</h2>
-              <p>
-              <ol>
-                  <li>Telah terakreditasi Unggul</li>
-                  <li>Telah terakreditasi internasional IABEE (Indonesia Accreditation Board for Engineering Education)</li>
-                  <li>Kurikulum Program Studi S1 Teknik Telekomunikasi dirancang dengan total beban 145 sks untuk lama studi 4 tahun/8 semester</li>
-                  <li>Salah satu prodi terbesar dan tertua di Telkom University</li>
-              </ol>
-              </p>
+      <h2 style="color: #952323">Proses Kerja Sederhana</h2>
+      <h3>Enkripsi</h3>
+      <ol>
+        <li>
+          <b>Persiapan Kunci:</b> Generate atau dapatkan kunci simetris yang
+          kuat untuk enkripsi dan dekripsi berkas.
+        </li>
+        <li>
+          <b>Membaca Berkas:</b> Baca berkas yang akan dienkripsi ke dalam
+          buffer memori.
+        </li>
+        <li>
+          <b>Enkripsi dengan AES-GCM:</b> Gunakan kunci simetris dan AES-GCM
+          untuk melakukan enkripsi pada buffer berkas.
+        </li>
+        <li>
+          <b>Multi-Factor Authentication (MFA):</b> Terapkan MFA, misalnya
+          dengan meminta masukan tambahan seperti kode OTP (One-Time Password)
+          atau token yang dihasilkan dari perangkat keamanan fisik.
+        </li>
+      </ol>
+      <h3>Dekripsi</h3>
+      <ol>
+        <li>
+          <b>Persiapan Kunci:</b> Gunakan kembali kunci simetris yang sama yang
+          digunakan pada proses enkripsi.
+        </li>
+        <li>
+          <b>Multi-Factor Authentication (MFA):</b> Lakukan verifikasi MFA
+          sebelum melanjutkan proses dekripsi.
+        </li>
+        <li>
+          <b>Dekripsi dengan AES-GCM:</b>Gunakan kunci simetris yang sama dan
+          AES-GCM untuk melakukan dekripsi terhadap berkas terenkripsi.
+        </li>
+        <li>
+          <b>Multi-Factor Authentication (MFA):</b> Terapkan MFA, misalnya
+          dengan meminta masukan tambahan seperti kode OTP (One-Time Password)
+          atau token yang dihasilkan dari perangkat keamanan fisik.
+        </li>
+        <li>
+          <b>Multi-Factor Authentication (MFA):</b> Terapkan MFA, misalnya
+          dengan meminta masukan tambahan seperti kode OTP (One-Time Password)
+          atau token yang dihasilkan dari perangkat keamanan fisik.
+        </li>
+        <li>
+          <b>Verifikasi Integritas:</b> Verifikasi tag autentikasi yang
+          dihasilkan selama proses enkripsi untuk memastikan integritas berkas.
+        </li>
+        <li>
+          <b>Hasil Dekripsi:</b> Hasil dekripsi berupa berkas asli setelah
+          proses dekripsi.
+        </li>
+      </ol>
+      <h3>Hal Penting untuk Diperhatikan</h3>
+      <ul>
+        <li>
+          <b>Keamanan Kunci dan MFA:</b> Jaga kunci simetris dengan sangat aman.
+          Selain itu, pastikan bahwa MFA diterapkan secara efektif untuk
+          menambah lapisan keamanan.
+        </li>
+        <li>
+          <b>Penerapan Praktik Keamanan yang Baik:</b> Pastikan kunci enkripsi
+          dan mekanisme MFA diimplementasikan sesuai dengan praktik keamanan
+          terbaik dan standar yang berlaku.
+        </li>
+      </ul>
 
-              <h2 style="color: #952323;">Prospek Karir</h2>
-              <p>
-                <ol>
-                    <li>Radio Engineer</li>
-                    <li>Data analyst</li>
-                    <li>Radio Planner</li>
-                    <li>Microwave engineer</li>
-                    <li>Rf engineer / specialist</li>
-                    <li>BSS Engiener</li>
-                    <li>Core network engineer / specialist</li>
-                    <li>Cloud architect</li>
-                </ol>
-              </p>  
-        </div>
-      </div>
+      <h2 style="color: #952323">Komitmen pada Keamanan</h2>
+      <p style="text-align: justify">
+        Komitmen kami terhadap keamanan tak terbantahkan. Kami mengedepankan
+        privasi dan integritas data Anda sebagai prioritas utama. Dalam setiap
+        langkah yang kami ambil, kami memastikan implementasi praktik keamanan
+        terbaik yang ada. Dari penggunaan enkripsi yang kuat hingga pengelolaan
+        kunci yang cermat, kami berkomitmen untuk melindungi informasi Anda dari
+        akses yang tidak sah. Kami secara terus-menerus melakukan evaluasi,
+        perbaikan, dan pembaruan keamanan untuk menjaga layanan kami tetap andal
+        dalam melindungi keamanan data Anda
+      </p>
+
+      <h2 style="color: #952323">Layanan Pelanggan</h2>
+      <p style="text-align: justify">
+        <q
+          >Kami percaya bahwa pengalaman pengguna yang mulus dan bantuan yang
+          responsif adalah kunci dari setiap layanan yang kami tawarkan. Tim
+          layanan pelanggan kami siap memberikan dukungan penuh dalam setiap
+          tahap perjalanan Anda. Dari pertanyaan umum hingga bantuan teknis
+          mendalam, kami hadir untuk membantu. Kami menyediakan sumber daya yang
+          jelas, panduan yang mudah dipahami, dan kontak langsung dengan tim
+          kami untuk memastikan setiap pertanyaan atau masalah Anda dijawab
+          dengan cepat dan tepat. Komitmen kami bukan hanya untuk menyelesaikan
+          masalah, tetapi juga untuk memastikan Anda merasa didukung dan
+          dihargai setiap saat.</q
+        >
+      </p>
+      <h2 style="color: #952323">Skalabilitas dan Fleksibilitas</h2>
+      <p style="text-align: justify">
+        Kami memahami pentingnya pertumbuhan dan perubahan dalam kebutuhan Anda.
+        Layanan kami didesain dengan fokus pada skalabilitas dan fleksibilitas,
+        memastikan bahwa platform kami dapat beradaptasi dengan perkembangan
+        bisnis atau kebutuhan pribadi Anda. Dari kemampuan untuk menangani
+        volume yang berkembang hingga fleksibilitas dalam menyesuaikan
+        fitur-fitur sesuai kebutuhan, kami berkomitmen untuk memberikan solusi
+        yang dapat tumbuh seiring dengan Anda. Kami terus melakukan perbaikan
+        dan pengembangan, memastikan bahwa layanan kami tetap relevan, adaptif,
+        dan dapat dipercaya dalam mengakomodasi kebutuhan masa depan Anda.
+      </p>
     </div>
+  </div>
+</div>
 
-    {% endblock %}
+{% endblock %}
